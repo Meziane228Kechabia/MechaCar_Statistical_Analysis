@@ -9,7 +9,7 @@ Suspension_Coil <- read.csv(file='Suspension_Coil.csv',check.names=F,stringsAsFa
 total_summary <- Suspension_Coil %>% summarize(mean(PSI), median(PSI),var(PSI), sd(PSI) ) #create summary table
 lot_summary <- Suspension_Coil %>% group_by(Manufacturing_Lot) %>% summarize(mean(PSI),median(PSI),var(PSI), sd(PSI)) #create summary table by lotNumber
 
-# Delivrable 3
+# Delivrable 3.
 
 t.test(Suspension_Coil$PSI,mu=1500) #compare sample versus population means
 # S3 method for default
